@@ -26,11 +26,4 @@ public class CalculatorServiceImpl implements CalculatorService {
             return num1 / num2;
     }
 
-    @Override
-    public String divideCheck(int num2) {
-        if (num2 == 0) {
-            return "<b>Деление на 0 запрещено. Вычисление не возможно</b>";
-        } else return "";
-    }
-
 }

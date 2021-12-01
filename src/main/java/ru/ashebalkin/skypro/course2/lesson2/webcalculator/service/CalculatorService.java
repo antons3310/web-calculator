@@ -9,6 +9,4 @@ public interface CalculatorService {
 
     int calcDivide(int num1, int num2);
 
-    String divideCheck(int num2);
-
 }
