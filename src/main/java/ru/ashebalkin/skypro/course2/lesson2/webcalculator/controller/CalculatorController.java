@@ -38,16 +38,7 @@ public class CalculatorController {
 
     @GetMapping("/divide")
     public String getCalcDivide(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
-        String result = divideCheck(num2);
-        if (result.equals("")) {
-            return createReply(num1, num2, calculatorService.calcDivide(num1, num2), "/");
-        } else return result;
-    }
-
-    private String divideCheck(int num2) {
-        if (num2 == 0) {
-            return "<b>Деление на 0 запрещено. Вычисление не возможно</b>";
-        } else return "";
+        return createReply(num1, num2, calculatorService.calcDivide(num1, num2), "/");
     }
 
     private String createReply(int num1, int num2, int num3, String sign) {
